@@ -16,11 +16,11 @@
 
         <div class="navbar">
             <ul>
-                <li id="box-shadow" class="active">Box Shadow</li>
-                <li id="text-shadow">Text Shadow</li>
-                <li id="border-radius">Border Radius</li>
-                <li id="linear-gradient">Linear Gradient</li>
-                <li id="animation">Animation</li>
+                <li id="box-shadow" onclick="showSection('box-shadow')">Box Shadow</li>
+                <li id="text-shadow" onclick="showSection('text-shadow')">Text Shadow</li>
+                <li id="border-radius" onclick="showSection('border-radius')">Border Radius</li>
+                <li id="linear-gradient" onclick="showSection('linear-gradient')">Linear Gradient</li>
+                <li id="animation" onclick="showSection('animation')">Animation</li>
             </ul>
         </div>
     </div>
@@ -37,6 +37,37 @@
 
             <!-- BOX SHADOW -->
             <div id="box-shadow-control" class="box-shadow-cont section-control">
+                <div>
+                    <label for="">boxVertical</label>
+                    <input type="range" min="-200" max="200" value="0">
+                    <span id="value">0px</span>
+                </div>
+                <div>
+                    <label for="">Horizontal</label>
+                    <input type="range" min="-200" max="200" value="0">
+                    <span id="value">0px</span>
+                </div>
+                <div>
+                    <label for="">Blur</label>
+                    <input type="range" min="0" max="100" value="0">
+                    <span id="value">0px</span>
+                </div>
+                <div>
+                    <label for="">Spread</label>
+                    <input type="range" min="0" max="100" value="0">
+                    <span id="value">0px</span>
+                </div>
+                <div>
+                    <label for="">Color</label>
+                    <input type="color">
+                </div>
+            </div>
+<!-- ------------------------------------------------------------------------------------- -->
+<!-- ------------------------------------------------------------------------------------- -->
+
+
+            <!-- TEXT SHADOW -->
+            <div id="text-shadow-control" class="text-shadow-cont section-control">
                 <div>
                     <label for="">Vertical</label>
                     <input type="range" min="-200" max="200" value="0">
@@ -62,6 +93,23 @@
                     <input type="color">
                 </div>
             </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

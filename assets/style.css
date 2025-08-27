@@ -2,10 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    /* outline: 1px solid red; */
 }
 body{
     background-color: #e1cceb;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
 }
 
 /* ------------------------------------------------------- */
@@ -15,18 +18,23 @@ body{
 
 .main-header{
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 10px;
+    /* background-color: rgb(150, 150, 150); */
+    padding: 20px;
+    width: 100%;
 }
 .header{
     background-color: white;
     box-shadow: 0px 0px 30px rgba(0,0,0,0.1);
     padding: 20px;
-    margin: 20px auto;
     border-radius: 20px;
-    width: 20%;
 
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
     font-size: 22px;
 }
 
@@ -34,7 +42,6 @@ body{
     background-color: white;
     box-shadow: 0px 0px 30px rgba(0,0,0,0.1);
     padding: 20px;
-    margin: 20px auto;
     border-radius: 20px;
     width: 70%;
 
@@ -45,23 +52,28 @@ body{
 .navbar ul{
     list-style: none;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
     /* background-color: pink; */
 }
 .navbar ul li{
+    /* box-sizing: border-box; */
     font-size: 17px;
-    background-color: rgb(250, 214, 255);
-    padding: 10px 30px;
-    margin: 0 20px;
+    background-color: rgb(252, 231, 255);
+    padding: .5vw 2vw;
     border-radius: 8px;
     cursor: pointer;
+    /* white-space: nowrap; */
     transition: all 0.3s ease;
 }
 .navbar ul li:hover{
-    background-color: rgb(221, 160, 221);
+    background-color: rgb(232, 195, 232);
     transform: translateY(-5px);
 }
 .navbar ul li.active{
-    background-color: rgb(221, 160, 221);
+    background-color: rgb(232, 195, 232);
 }
 
 /* ------------------------------------------------------- */
@@ -71,7 +83,7 @@ body{
 /* ------------------------------------------------------- */
 
 .main-container{
-    background-color: rgb(175, 175, 175);
+    /* background-color: rgb(175, 175, 175); */
     display: flex;
     justify-content: space-between;
     margin: 10px auto;
@@ -80,10 +92,7 @@ body{
 }
 
 .left-cont{
-    background-color: white;
     box-shadow: 0px 0px 30px rgba(0,0,0,0.1);
-    padding: 20px;
-    border-radius: 20px;
     width: 30%;
 }
 
@@ -101,8 +110,24 @@ body{
 /* ------------------------------------------------- */
 /* ------------------------------------------------- */
 
+/* SECTION-CONTROL */
+.section-control{
+    display: none;
+}
+.section-control.active{
+    display: block;
+}
+
+
 /* BOX-SHADOW */
-.box-shadow-cont div{
+.box-shadow-cont, .text-shadow-cont{
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 30px rgba(0,0,0,0.1);
+    border-radius: 20px;
+    padding: 20px;
+    width: 100%;
+}
+.box-shadow-cont div, .text-shadow-cont div{
     background-color: rgb(234, 234, 234);
     display: flex;
     align-items: start;
@@ -113,7 +138,7 @@ body{
     padding: 10px;
     border-radius: 10px;
 }
-.box-shadow-cont div input{
+.box-shadow-cont div input, .text-shadow-cont div input{
     width: 100%;
 }
 
