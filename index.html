@@ -59,7 +59,7 @@
                 </div>
                 <div>
                     <label for="">Color</label>
-                    <input type="color">
+                    <input type="color" class="input-color">
                 </div>
             </div>
 <!-- ------------------------------------------------------------------------------------- -->
@@ -90,14 +90,14 @@
                 </div>
                 <div>
                     <label for="">Color</label>
-                    <input type="color">
+                    <input type="color" class="input-color">
                 </div>
             </div>
 <!-- ------------------------------------------------------------------------------------- -->
 <!-- ------------------------------------------------------------------------------------- -->
 
 
-            <!-- BORDER RADIUS -->
+            <!-- BORDER -->
             <div id="border-radius-control" class="border-radius-cont section-control">
                 <div>
                     <label for="">Border</label>
@@ -105,11 +105,21 @@
                     <span id="value">0px</span>
                 </div>
                 <div>
+                    <label for="">Border Type</label>
+                    <select>
+                        <option value="solid">Solid</option>
+                        <option value="dashed">Dashed</option>
+                        <option value="dotted">Dotted</option>
+                        <option value="double">Double</option>
+                        <option value="groove">Groove</option>
+                    </select>
+                </div>
+                <div>
                     <label for="">Color</label>
-                    <input type="color">
+                    <input type="color" class="input-color">
                 </div>
 
-                
+                <!-- BORDER RADIUS -->
                 <div class="radius-control">
                     <h3>Radius</h3>
 
@@ -140,14 +150,27 @@
                         <span id="value">0px</span>
                     </div>
                 </div>
-
-
             </div>
+<!-- ------------------------------------------------------------------------------------- -->
+<!-- ------------------------------------------------------------------------------------- -->
 
 
-
-
-
+            <!-- LINEAR GRADIENT -->
+            <div id="linear-gradient-control" class="linear-gradient-cont section-control">
+                <div>
+                    <label for="">Color 1</label>
+                    <input type="color" class="input-color">
+                </div>
+                <div>
+                    <label for="">Color 2</label>
+                    <input type="color" class="input-color">
+                </div>
+                <div>
+                    <label for="">Angle</label>
+                    <input type="range" min="0" max="360" value="0">
+                    <span id="value">0deg</span>
+                </div>
+            </div> 
 
 
 
