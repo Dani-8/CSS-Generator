@@ -141,12 +141,26 @@ body{
 .section-control div input{
     width: 100%;
 }
+
+
+.input-text{
+    padding: 10px;
+    outline: none;
+    border: 1px solid rgb(182, 182, 182);
+    border-radius: 10px;
+}
 .input-color{
     outline: none;
     height: 40px;
     border: 1px solid rgb(39, 39, 39);
     border-radius: 5px;
 }
+.input-chkbox{
+    padding: 20px;
+    height: 20px;
+}
+
+
 
 
 .divider{
@@ -216,7 +230,13 @@ body{
     justify-content: center;
     margin: 10px;
 }
+.text-shadow-box{
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: rgb(219, 110, 232);
 
+}
 .code-cont{
     background-color: rgb(234, 234, 234);
     padding: 10px;
@@ -233,14 +253,15 @@ body{
     padding: 12px 30px;
     border-radius: 5px;
     text-transform: uppercase;
-    background-color: rgb(245, 173, 255);
+    background-color: rgb(242, 209, 246);
     color: black;
     cursor: pointer;
     transition: .3s ease;
 }
 .copy-code-btn:hover{
+    padding: 12px 50px;
     border-radius: 12px;
-    background-color: rgb(235, 92, 235);
+    background-color: rgb(228, 188, 228);
 }
 
 

@@ -38,28 +38,32 @@
             <!-- BOX SHADOW -->
             <div id="box-shadow-control" class="box-shadow-cont section-control">
                 <div>
-                    <label for="">boxVertical</label>
-                    <input type="range" min="-200" max="200" value="0">
-                    <span id="value">0px</span>
+                    <label for="">Horizontal</label>
+                    <input id="box-shadow-horizontal-range" type="range" min="-200" max="200" value="0">
+                    <span id="box-shadow-horizontal-value">0px</span>
                 </div>
                 <div>
-                    <label for="">Horizontal</label>
-                    <input type="range" min="-200" max="200" value="0">
-                    <span id="value">0px</span>
+                    <label for="">Vertical</label>
+                    <input id="box-shadow-vertical-range" type="range" min="-200" max="200" value="0">
+                    <span id="box-shadow-vertical-value">0px</span>
                 </div>
                 <div>
                     <label for="">Blur</label>
-                    <input type="range" min="0" max="100" value="0">
-                    <span id="value">0px</span>
+                    <input id="box-shadow-blur-range" type="range" min="0" max="100" value="0">
+                    <span id="box-shadow-blur-value">0px</span>
                 </div>
                 <div>
                     <label for="">Spread</label>
-                    <input type="range" min="0" max="100" value="0">
-                    <span id="value">0px</span>
+                    <input id="box-shadow-spread-range" type="range" min="-100" max="100" value="0">
+                    <span id="box-shadow-spread-value">0px</span>
+                </div>
+                <div>
+                    <label for="">Inset</label>
+                    <input id="box-shadow-inset-check" class="input-chkbox" type="checkbox">
                 </div>
                 <div>
                     <label for="">Color</label>
-                    <input type="color" class="input-color">
+                    <input id="box-shadow-color" type="color" class="input-color">
                 </div>
             </div>
 <!-- ------------------------------------------------------------------------------------- -->
@@ -69,28 +73,27 @@
             <!-- TEXT SHADOW -->
             <div id="text-shadow-control" class="text-shadow-cont section-control">
                 <div>
-                    <label for="">Vertical</label>
-                    <input type="range" min="-200" max="200" value="0">
-                    <span id="value">0px</span>
+                    <label for="">Text</label>
+                    <input id="text-input" class="input-text" type="text" placeholder="Type your text here...">
                 </div>
                 <div>
                     <label for="">Horizontal</label>
-                    <input type="range" min="-200" max="200" value="0">
-                    <span id="value">0px</span>
+                    <input id="text-shadow-horizontal-range" type="range" min="-200" max="200" value="0">
+                    <span id="text-shadow-horizontal-value">0px</span>
+                </div>
+                <div>
+                    <label for="">Vertical</label>
+                    <input id="text-shadow-vertical-range" type="range" min="-200" max="200" value="0">
+                    <span id="text-shadow-vertical-value">0px</span>
                 </div>
                 <div>
                     <label for="">Blur</label>
-                    <input type="range" min="0" max="100" value="0">
-                    <span id="value">0px</span>
+                    <input id="text-shadow-blur-range" type="range" min="0" max="100" value="0">
+                    <span id="text-shadow-blur-value">0px</span>
                 </div>
                 <div>
-                    <label for="">Spread</label>
-                    <input type="range" min="0" max="100" value="0">
-                    <span id="value">0px</span>
-                </div>
-                <div>
-                    <label for="">Color</label>
-                    <input type="color" class="input-color">
+                    <label  for="">Color</label>
+                    <input id="text-shadow-color" type="color" class="input-color">
                 </div>
             </div>
 <!-- ------------------------------------------------------------------------------------- -->
@@ -101,12 +104,12 @@
             <div id="border-radius-control" class="border-radius-cont section-control">
                 <div>
                     <label for="">Border</label>
-                    <input type="range" min="0" max="100" value="0">
-                    <span id="value">0px</span>
+                    <input id="border-range" type="range" min="0" max="100" value="0">
+                    <span id="border-value">0px</span>
                 </div>
                 <div>
                     <label for="">Border Type</label>
-                    <select>
+                    <select id="border-type-select">
                         <option value="solid">Solid</option>
                         <option value="dashed">Dashed</option>
                         <option value="dotted">Dotted</option>
@@ -116,7 +119,7 @@
                 </div>
                 <div>
                     <label for="">Color</label>
-                    <input type="color" class="input-color">
+                    <input id="border-color" type="color" class="input-color">
                 </div>
 
                 <!-- BORDER RADIUS -->
@@ -125,29 +128,29 @@
 
                     <div>
                         <label for="">All Corners</label>
-                        <input type="range" min="0" max="100" value="0">
-                        <span id="value">0px</span>
+                        <input id="border-radius-all" type="range" min="0" max="100" value="0">
+                        <span id="border-radius-all-value">0px</span>
                     </div>
                     <span class="divider"></span>
                     <div>
                         <label for="">Top Left Corner</label>
-                        <input type="range" min="0" max="100" value="0">
-                        <span id="value">0px</span>
+                        <input id="border-radius-top-left" type="range" min="0" max="100" value="0">
+                        <span id="border-radius-top-left-value">0px</span>
                     </div>
                     <div>
                         <label for="">Top Right Corner</label>
-                        <input type="range" min="0" max="100" value="0">
-                        <span id="value">0px</span>
+                        <input id="border-radius-top-right" type="range" min="0" max="100" value="0">
+                        <span id="border-radius-top-right-value">0px</span>
                     </div>
                     <div>
                         <label for="">Bottom Right Corner</label>
-                        <input type="range" min="0" max="100" value="0">
-                        <span id="value">0px</span>
+                        <input id="border-radius-bottom-right" type="range" min="0" max="100" value="0">
+                        <span id="border-radius-bottom-right-value">0px</span>
                     </div>
                     <div>
                         <label for="">Bottom Left Corner</label>
-                        <input type="range" min="0" max="100" value="0">
-                        <span id="value">0px</span>
+                        <input id="border-radius-bottom-left" type="range" min="0" max="100" value="0">
+                        <span id="border-radius-bottom-left-value">0px</span>
                     </div>
                 </div>
             </div>
@@ -201,7 +204,34 @@
                 <div class="box-shadow-box box" id="box-shadow-box"></div>
                 <!-- ----------------------------------------------------------- -->
                 <div class="code-cont">
-                    <p>box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);</p>
+                    <p id="box-shadow-code">box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);</p>
+                </div>
+                <button id="copy-code-btn" class="copy-code-btn">Copy Code</button>
+            </div>
+<!-- ---------------------------------------------------------------------------------------------------- -->
+<!-- ---------------------------------------------------------------------------------------------------- -->
+
+            <!-- TEXT SHADOW -->
+            <div id="text-shadow-content" class="section-content">
+                <h2>TEXT SHADOW</h2>
+                <p class="text-shadow-box" id="text-shadow-box"></p>
+                <!-- ----------------------------------------------------------- -->
+                <div class="code-cont">
+                    <p id="text-shadow-code">text-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);</p>
+                </div>
+                <button id="copy-code-btn" class="copy-code-btn">Copy Code</button>
+            </div>
+<!-- ---------------------------------------------------------------------------------------------------- -->
+<!-- ---------------------------------------------------------------------------------------------------- -->
+
+            <!-- BORDER RADIUS -->
+
+            <div id="border-radius-content" class="section-content">
+                <h2>BORDER RADIUS</h2>
+                <div class="border-radius-box box" id="border-box"></div>
+                <!-- ----------------------------------------------------------- -->
+                <div class="code-cont">
+                    <p id="border-radius-code">border-radius: 0px;</p>
                 </div>
                 <button id="copy-code-btn" class="copy-code-btn">Copy Code</button>
             </div>
@@ -211,7 +241,8 @@
 
 
 
-        
+
+
         </div>
 
 
