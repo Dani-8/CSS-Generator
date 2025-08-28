@@ -120,14 +120,14 @@ body{
 
 
 /* BOX-SHADOW */
-.box-shadow-cont, .text-shadow-cont{
+.box-shadow-cont, .text-shadow-cont, .border-radius-cont{
     background-color: rgb(255, 255, 255);
     box-shadow: 0px 0px 30px rgba(0,0,0,0.1);
     border-radius: 20px;
     padding: 20px;
     width: 100%;
 }
-.box-shadow-cont div, .text-shadow-cont div{
+.box-shadow-cont div, .text-shadow-cont div, .border-radius-cont .radius-control div{
     background-color: rgb(234, 234, 234);
     display: flex;
     align-items: start;
@@ -138,13 +138,24 @@ body{
     padding: 10px;
     border-radius: 10px;
 }
-.box-shadow-cont div input, .text-shadow-cont div input{
+.box-shadow-cont div input, .text-shadow-cont div input, .border-radius-cont div input{
     width: 100%;
 }
 
+.divider{
+    height: .8px;
+    width: 100%;
+    display: block;
+    background-color: rgb(40, 40, 40);
+}
 
-
-
+.radius-control{
+    /* background-color: lightblue; */
+    margin-top: 20px;
+}
+.radius-control h3{
+    text-align: center;
+}
 
 
 
