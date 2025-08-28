@@ -9,6 +9,7 @@ let animationLink = document.getElementById("animation");
 
 // ALL CONTROLS VARIABLES
 let sectionControl = document.querySelectorAll(".section-control");
+let sectionContent = document.querySelectorAll(".section-content");
 
 let boxShadowControl = document.getElementById("box-shadow-control")
 
@@ -26,30 +27,32 @@ let boxShadowControl = document.getElementById("box-shadow-control")
 
 
 function showSection(sectionId){
-    // Hide all section controls
-    sectionControl.forEach(section => {
-        section.classList.remove("active");
+    // Hide all section control/content
+    sectionControl.forEach(control => {
+        control.classList.remove("active");
+    });
+    sectionContent.forEach(content => {
+        content.classList.remove("active");
     });
 
 
-    // Show the selected section control
+    // Show the selected section control/content
     const selectedControl = document.getElementById(`${sectionId}-control`);
     if (selectedControl) {
         selectedControl.classList.add("active");
     }
+    const selectedContent = document.getElementById(`${sectionId}-content`);
+    if (selectedContent) {
+        selectedContent.classList.add("active");
+    }
 
 // --------------------------------------------------------------------------------
 
-    // NVBAR LINK ACTIVE OR NOT
-    const newActiveLink = document.getElementById(sectionId);
-    if (newActiveLink) {
-        newActiveLink.classList.add("active");
-    }
-
-    const activeLink = document.querySelector(".navbar li.active");
-    if (activeLink) {
-        activeLink.classList.remove("active");
-    }
+    // NAVBAR LINK ACTIVE OR NOT
+    // Remove .active from all navbar li
+    document.querySelectorAll('.navbar ul li').forEach(li => li.classList.remove('active'));
+    // Add .active to the clicked li
+    document.getElementById(sectionId).classList.add('active');
 }
 
 

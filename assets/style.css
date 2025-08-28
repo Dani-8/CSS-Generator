@@ -98,14 +98,8 @@ body{
 }
 
 .right-cont{
-    background-color: white;
-    box-shadow: 0px 0px 30px rgba(0,0,0,0.1);
-    padding: 20px;
-    border-radius: 20px;
+    background-color: rgb(255, 0, 0);
     width: 65%;
-
-    display: flex;
-    justify-content: center;
 }
 
 
@@ -113,6 +107,9 @@ body{
 /* ------------------------------------------------- */
 /* ------------------------------------------------- */
 /* ------------------------------------------------- */
+/* LEFT-SIDE-START */
+/* LEFT-SIDE-START */
+/* LEFT-SIDE-START */
 
 /* SECTION-CONTROL */
 .section-control{
@@ -122,8 +119,7 @@ body{
     display: block;
 }
 
-
-/* BOX-SHADOW */
+/* SECTION-CONTROL-DESIGN */
 .section-control{
     background-color: rgb(255, 255, 255);
     box-shadow: 0px 0px 30px rgba(0,0,0,0.1);
@@ -173,6 +169,82 @@ body{
     width: 100%;
 
 }
+
+
+
+/* LEFT-SIDE-END */
+/* LEFT-SIDE-END */
+/* LEFT-SIDE-END */
+
+
+/* RIGHT-SIDE-START */
+/* RIGHT-SIDE-START */
+/* RIGHT-SIDE-START */
+
+/* SECTION-CONTROL */
+.section-content{
+    display: none;
+}
+.section-content.active{
+    display: flex;
+}
+
+
+/* SECTION-CONTENT-DESIGN */
+.section-content{
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 30px rgba(0,0,0,0.1);
+    border-radius: 20px;
+    padding: 30px 20px;
+    width: 100%;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.section-content h2{
+    margin-bottom: 50px;
+}
+.box{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(161, 70, 192);
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+.code-cont{
+    background-color: rgb(234, 234, 234);
+    padding: 10px;
+    border-radius: 10px;
+    width: 80%;
+    margin: 50px 0 30px;
+    text-align: center;
+}
+
+.copy-code-btn{
+    outline: none;
+    border: none;
+    font-size: 17px;
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    background-color: rgb(245, 173, 255);
+    color: black;
+    cursor: pointer;
+    transition: .3s ease;
+}
+.copy-code-btn:hover{
+    border-radius: 12px;
+    background-color: rgb(235, 92, 235);
+}
+
+
+
 
 
 
