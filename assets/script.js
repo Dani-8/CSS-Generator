@@ -41,14 +41,14 @@ function showSection(sectionId){
 // --------------------------------------------------------------------------------
 
     // NVBAR LINK ACTIVE OR NOT
-    const activeLink = document.querySelector(".navbar li.active");
-    if (activeLink) {
-        activeLink.classList.remove("active");
-    }
-
     const newActiveLink = document.getElementById(sectionId);
     if (newActiveLink) {
         newActiveLink.classList.add("active");
+    }
+
+    const activeLink = document.querySelector(".navbar li.active");
+    if (activeLink) {
+        activeLink.classList.remove("active");
     }
 }
 
