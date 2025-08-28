@@ -39,7 +39,6 @@ function showSection(sectionId){
     if (selectedContent) {
         selectedContent.classList.add("active");
     }
-
 // --------------------------------------------------------------------------------
 
     // NAVBAR LINK ACTIVE OR NOT
@@ -266,6 +265,7 @@ animationIterationCount.addEventListener("input", updateAnimation)
 
 
 
+showSection("animation")
 
 
 

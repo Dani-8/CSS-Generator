@@ -183,7 +183,7 @@
             <div id="animation-control" class="animation-control-cont section-control">
                 <div>
                     <label for="">Duration (s)</label>
-                    <input id="animation-duration" type="number" value="2" min="0" max="10">
+                    <input id="animation-duration" type="range" value="2" min="0" max="10">
                     <span id="animation-duration-value">2s</span>
                 </div>
                 <div>
@@ -198,17 +198,94 @@
                 </div>
                 <div>
                     <label for="">Iteration Count</label>
-                    <input id="animation-iteration-count" type="number" value="1" min="1" max="10">
+                    <input id="animation-iteration-count" type="range" value="1" min="1" max="10">
+                    <span id="animation-iteration-count-value">1</span>
                 </div>
 
+                <div class="divider"></div>
+
+                <h3>Properties to Animate</h3>
+
+                <div class="animation-properties-cont">
+                    <!-- OPACITY CONTROL -->
+                    <div class="property-control">
+                        <div class="property-checkbox">
+                            <input type="checkbox" id="enable-opacity" value="box-shadow">
+                            <label for="enable-opacity">Opacity</label>
+                        </div>
+                        <div>
+                            <label for="">From</label>
+                            <input type="range" id="from-opacity" class="animation-range" min="0" max="1" value="1">
+                            <span id="from-opacity-value">1</span>
+                            <label for="">To</label>
+                            <input type="range" id="to-opacity" class="animation-range" min="0" max="1" value="0">
+                            <span id="to-opacity-value">0</span>
+                        </div>
+                    </div>
+
+                    <!-- SCALE CONTROL -->
+                    <div class="property-control">
+                        <div class="property-checkbox">
+                            <input type="checkbox" id="enable-scale" value="box-shadow">
+                            <label for="enable-scale">Scale</label>
+                        </div>
+                        <div>
+                            <label for="">From</label>
+                            <input type="range" id="from-scale" class="animation-range" min="0" max="5" value="1">
+                            <span id="from-scale-value">Scale(1)</span>
+                            <label for="">To</label>
+                            <input type="range" id="to-scale" class="animation-range" min="0" max="5" value="0">
+                            <span id="to-scale-value">Scale(0)</span>
+                        </div>
+                    </div>
+
+                    <!-- ROTATE CONTROL -->
+                    <div class="property-control">
+                        <div class="property-checkbox">
+                            <input type="checkbox" id="enable-rotate" value="box-shadow">
+                            <label for="enable-rotate">Rotate</label>
+                        </div>
+                        <div>
+                            <label for="">From</label>
+                            <input type="range" id="from-rotate" class="animation-range" min="0" max="360" value="0">
+                            <span id="from-rotate-value">Rotate(0deg)</span>
+                            <label for="">To</label>
+                            <input type="range" id="to-rotate" class="animation-range" min="0" max="360" value="360">
+                            <span id="to-rotate-value">Rotate(360deg)</span>
+                        </div>
+                    </div>
+
+                    <!-- COLOR CONTROL -->
+                    <div class="property-control">
+                        <div class="property-checkbox">
+                            <input type="checkbox" id="enable-color" value="box-shadow">
+                            <label for="enable-color">Color</label>
+                        </div>
+                        <div>
+                            <label for="">From</label>
+                            <input type="color" id="from-color" class="animation-range input-color" value="#fcd34d">
+                            <label for="">To</label>
+                            <input type="color" id="to-color" class="animation-range input-color" value="#ef4444">
+                        </div>
+                    </div>
+
+                    <!-- BLUR CONTROL -->
+                    <div class="property-control">
+                        <div class="property-checkbox">
+                            <input type="checkbox" id="enable-blur" value="box-shadow">
+                            <label for="enable-blur">Blur</label>
+                        </div>
+                        <div>
+                            <label for="">From</label>
+                            <input type="range" id="from-blur" class="animation-range" min="0" max="100" value="0">
+                            <span id="from-blur-value">0px</span>
+                            <label for="">To</label>
+                            <input type="range" id="to-blur" class="animation-range" min="0" max="100" value="10">
+                            <span id="to-blur-value">10px</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-
-
-
-
-
-
 
         </div>
         <!-- LEFT-SIDE-END -->
@@ -270,12 +347,20 @@
                 </div>
                 <button id="copy-code-btn" class="copy-code-btn">Copy Code</button>
             </div>
+<!-- ---------------------------------------------------------------------------------------------------- -->
+<!-- ---------------------------------------------------------------------------------------------------- -->
 
+            <!-- ANIMATION -->
 
-
-
-
-
+            <div id="animation-content" class="section-content">
+                <h2>ANIMATION</h2>
+                <div class="animation-box box" id="animation-box"></div>
+                <!-- ----------------------------------------------------------- -->
+                <div class="code-cont">
+                    <p id="animation-code"></p>
+                </div>
+                <button id="copy-code-btn" class="copy-code-btn">Copy Code</button>
+            </div>
 
 
         </div>
