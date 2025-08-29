@@ -394,7 +394,6 @@ animationInput.forEach(input => {
 
 
 
-showSection("animation")
 
 updateBoxShadow();
 updateTextShadow();
