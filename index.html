@@ -39,27 +39,29 @@
             <div id="box-shadow-control" class="box-shadow-cont section-control">
                 <div>
                     <label for="">Horizontal</label>
-                    <input id="box-shadow-horizontal-range" type="range" min="-200" max="200" value="0">
+                    <input id="box-shadow-horizontal-range" type="range" class="input-range" min="-200" max="200" value="0">
                     <span id="box-shadow-horizontal-value">0px</span>
                 </div>
                 <div>
                     <label for="">Vertical</label>
-                    <input id="box-shadow-vertical-range" type="range" min="-200" max="200" value="0">
+                    <input id="box-shadow-vertical-range" type="range" class="input-range" min="-200" max="200" value="0">
                     <span id="box-shadow-vertical-value">0px</span>
                 </div>
                 <div>
                     <label for="">Blur</label>
-                    <input id="box-shadow-blur-range" type="range" min="0" max="100" value="0">
+                    <input id="box-shadow-blur-range" type="range" class="input-range" min="0" max="100" value="0">
                     <span id="box-shadow-blur-value">0px</span>
                 </div>
                 <div>
                     <label for="">Spread</label>
-                    <input id="box-shadow-spread-range" type="range" min="-100" max="100" value="0">
+                    <input id="box-shadow-spread-range" type="range" class="input-range" min="-100" max="100" value="0">
                     <span id="box-shadow-spread-value">0px</span>
                 </div>
                 <div>
-                    <label for="">Inset</label>
-                    <input id="box-shadow-inset-check" class="input-chkbox" type="checkbox">
+                    <span class="inset-chkbox-cont">
+                        <input id="box-shadow-inset-check" class="input-chkbox" type="checkbox">
+                        <label for="box-shadow-inset-check">Inset</label>
+                    </span>
                 </div>
                 <div>
                     <label for="">Color</label>
@@ -78,17 +80,17 @@
                 </div>
                 <div>
                     <label for="">Horizontal</label>
-                    <input id="text-shadow-horizontal-range" type="range" min="-200" max="200" value="0">
+                    <input id="text-shadow-horizontal-range" type="range" class="input-range" min="-200" max="200" value="0">
                     <span id="text-shadow-horizontal-value">0px</span>
                 </div>
                 <div>
                     <label for="">Vertical</label>
-                    <input id="text-shadow-vertical-range" type="range" min="-200" max="200" value="0">
+                    <input id="text-shadow-vertical-range" type="range" class="input-range" min="-200" max="200" value="0">
                     <span id="text-shadow-vertical-value">0px</span>
                 </div>
                 <div>
                     <label for="">Blur</label>
-                    <input id="text-shadow-blur-range" type="range" min="0" max="100" value="0">
+                    <input id="text-shadow-blur-range" type="range" class="input-range" min="0" max="100" value="0">
                     <span id="text-shadow-blur-value">0px</span>
                 </div>
                 <div>
@@ -104,7 +106,7 @@
             <div id="border-radius-control" class="border-radius-cont section-control">
                 <div>
                     <label for="">Border</label>
-                    <input id="border-range" type="range" min="0" max="50" value="0">
+                    <input id="border-range" type="range" class="input-range" min="0" max="50" value="0">
                     <span id="border-value">0px</span>
                 </div>
                 <div>
@@ -128,28 +130,28 @@
 
                     <div>
                         <label for="">All Corners</label>
-                        <input id="border-radius-all-corners" type="range" min="0" max="100" value="0">
+                        <input id="border-radius-all-corners" type="range" class="input-range" min="0" max="100" value="0">
                         <span id="border-radius-all-corners-values">0px</span>
                     </div>
                     <span class="divider"></span>
                     <div>
                         <label for="">Top Left Corner</label>
-                        <input id="border-radius-top-left" type="range" min="0" max="100" value="0">
+                        <input id="border-radius-top-left" type="range" class="input-range" min="0" max="100" value="0">
                         <span id="border-radius-top-left-value">0px</span>
                     </div>
                     <div>
                         <label for="">Top Right Corner</label>
-                        <input id="border-radius-top-right" type="range" min="0" max="100" value="0">
+                        <input id="border-radius-top-right" type="range" class="input-range" min="0" max="100" value="0">
                         <span id="border-radius-top-right-value">0px</span>
                     </div>
                     <div>
                         <label for="">Bottom Right Corner</label>
-                        <input id="border-radius-bottom-right" type="range" min="0" max="100" value="0">
+                        <input id="border-radius-bottom-right" type="range" class="input-range" min="0" max="100" value="0">
                         <span id="border-radius-bottom-right-value">0px</span>
                     </div>
                     <div>
                         <label for="">Bottom Left Corner</label>
-                        <input id="border-radius-bottom-left" type="range" min="0" max="100" value="0">
+                        <input id="border-radius-bottom-left" type="range" class="input-range" min="0" max="100" value="0">
                         <span id="border-radius-bottom-left-value">0px</span>
                     </div>
                 </div>
@@ -170,7 +172,7 @@
                 </div>
                 <div>
                     <label for="">Angle</label>
-                    <input id="linear-gradient-angle" type="range" min="0" max="360" value="80">
+                    <input id="linear-gradient-angle" type="range" class="input-range" min="0" max="360" value="80">
                     <span id="linear-gradient-angle-value">0deg</span>
                 </div>
             </div> 
@@ -183,12 +185,12 @@
             <div id="animation-control" class="animation-control-cont section-control">
                 <div>
                     <label for="">Duration (s)</label>
-                    <input id="animation-duration" type="range" value="2" min="0" max="10">
+                    <input id="animation-duration" type="range" class="input-range" value="2" min="0" max="10" step="0.2">
                     <span id="animation-duration-value">2s</span>
                 </div>
                 <div>
                     <label for="">Timing Function</label>
-                    <select id="animation-timing-function">
+                    <select id="animation-timing-function" class="border-type-select">
                         <option value="ease">Ease</option>
                         <option value="linear">Linear</option>
                         <option value="ease-in">Ease In</option>
@@ -198,12 +200,14 @@
                 </div>
                 <div>
                     <label for="">Iteration Count</label>
-                    <input id="animation-iteration-count" type="range" value="1" min="1" max="10">
+                    <input id="animation-iteration-count" type="range" class="input-range" value="1" min="1" max="10">
                     <span id="animation-iteration-count-value">1</span>
                 </div>
                 <div>
-                    <input type="checkbox" id="animation-infinite-loop" checked>
-                    <label for="animation-infinite-loop">Infinite Loop</label>
+                    <span class="infinite-chkbox-cont">
+                        <input type="checkbox" class="input-chkbox" id="animation-infinite-loop" checked>
+                        <label for="animation-infinite-loop">Infinite Loop</label>
+                    </span>
                 </div>
 
                 <div class="divider"></div>
@@ -219,10 +223,10 @@
                         </div>
                         <div>
                             <label for="">From</label>
-                            <input type="range" id="from-opacity" class="animation-range" min="0" max="1" value="1">
+                            <input type="range" id="from-opacity" class="animation-range input-range" min="0" max="1" step="0.1" value="0">
                             <span id="from-opacity-value">1</span>
                             <label for="">To</label>
-                            <input type="range" id="to-opacity" class="animation-range" min="0" max="1" value="0">
+                            <input type="range" id="to-opacity" class="animation-range input-range" min="0" max="1" step="0.1" value="1">
                             <span id="to-opacity-value">0</span>
                         </div>
                     </div>
@@ -235,11 +239,11 @@
                         </div>
                         <div>
                             <label for="">From</label>
-                            <input type="range" id="from-scale" class="animation-range" min="0" max="5" value="1">
-                            <span id="from-scale-value">Scale(1)</span>
+                            <input type="range" id="from-scale" class="animation-range input-range" min="0" max="5" step="0.1" value="0">
+                            <span id="from-scale-value">Scale(0)</span>
                             <label for="">To</label>
-                            <input type="range" id="to-scale" class="animation-range" min="0" max="5" value="0">
-                            <span id="to-scale-value">Scale(0)</span>
+                            <input type="range" id="to-scale" class="animation-range input-range" min="0" max="5" step="0.1" value="1">
+                            <span id="to-scale-value">Scale(1)</span>
                         </div>
                     </div>
 
@@ -251,10 +255,10 @@
                         </div>
                         <div>
                             <label for="">From</label>
-                            <input type="range" id="from-rotation" class="animation-range" min="0" max="360" value="0">
+                            <input type="range" id="from-rotation" class="animation-range input-range" min="0" max="360" value="0">
                             <span id="from-rotation-value">Rotate(0deg)</span>
                             <label for="">To</label>
-                            <input type="range" id="to-rotation" class="animation-range" min="0" max="360" value="360">
+                            <input type="range" id="to-rotation" class="animation-range input-range" min="0" max="360" value="360">
                             <span id="to-rotation-value">Rotate(360deg)</span>
                         </div>
                     </div>
@@ -267,9 +271,9 @@
                         </div>
                         <div>
                             <label for="">From</label>
-                            <input type="color" id="from-color" class="animation-range input-color" value="#fcd34d">
+                            <input type="color" id="from-color" class="animation-range input-color color1" value="#fcd34d">
                             <label for="">To</label>
-                            <input type="color" id="to-color" class="animation-range input-color" value="#ef4444">
+                            <input type="color" id="to-color" class="animation-range input-color color2" value="#ef4444">
                         </div>
                     </div>
 
@@ -281,11 +285,11 @@
                         </div>
                         <div>
                             <label for="">From</label>
-                            <input type="range" id="from-blur" class="animation-range" min="0" max="100" value="0">
-                            <span id="from-blur-value">0px</span>
+                            <input type="range" id="from-blur" class="animation-range input-range" min="0" max="100" value="20">
+                            <span id="from-blur-value">20px</span>
                             <label for="">To</label>
-                            <input type="range" id="to-blur" class="animation-range" min="0" max="100" value="10">
-                            <span id="to-blur-value">10px</span>
+                            <input type="range" id="to-blur" class="animation-range input-range" min="0" max="100" value="0">
+                            <span id="to-blur-value">0px</span>
                         </div>
                     </div>
                 </div>
@@ -361,65 +365,19 @@
                 <div class="animation-box box" id="animation-box"></div>
                 <!-- ----------------------------------------------------------- -->
                 <div class="code-cont">
-                    <p id="animation-code"></p>
+                    <pre id="animation-code"></pre>
                 </div>
                 <button id="copy-code-btn" class="copy-code-btn">Copy Code</button>
             </div>
 
-
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </div>
 
 
-
-
-
-
-
-
+    <!-- MESSAGE BOX FOR COPY CONFIRMATION -->
+    <div id="msg-box" class="msg-box">
+        Code Copied!
+    </div>
 
 
     <script src="assets/script.js"></script>

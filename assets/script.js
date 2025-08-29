@@ -325,8 +325,8 @@ function updateAnimation() {
     document.head.appendChild(styleSheet);
 
     styleSheet.sheet.insertRule(`@keyframes myCustomAnimation {
-        from { ${keyframeFrom} }
-        to { ${keyframeTo} }
+        from {${keyframeFrom}}
+        to {${keyframeTo}}
     }`)
 
 
@@ -335,21 +335,17 @@ function updateAnimation() {
 
     // UPDATE THE CODE DISPLAY
     let finalCode = `@keyframes myCustomAnimation {
-        <br>
-        from { 
-        <br>
-            ${keyframeFrom.replace(/;/g, ";<br> ")} 
-        }
-        <br>
-        to { 
-        <br>
-            ${keyframeTo.replace(/;/g, ";<br> ")} 
-        }
+    from { 
+        ${keyframeFrom.replace(/;/g, ";\n       ")}
     }
-        <br>
-        ,my-element{
-            animation: myCustomAnimation ${duration}s ${timing} ${iterationCount};
-        }`
+    to { 
+        ${keyframeTo.replace(/;/g, ";\n       ")}
+    }
+}
+
+.my-element {
+    animation: myCustomAnimation ${duration}s ${timing} ${iterationCount};
+}`;
 
     animationCode.innerHTML = finalCode
 
@@ -367,9 +363,6 @@ function updateAnimation() {
 
     document.getElementById("from-rotation-value").textContent = fromRotation.value
     document.getElementById("to-rotation-value").textContent = toRotation.value
-
-    // document.getElementById("from-color-value").textContent = fromColor.value
-    // document.getElementById("to-color-value").textContent = toColor.value
 
     document.getElementById("from-blur-value").textContent = fromBlur.value
     document.getElementById("to-blur-value").textContent = toBlur.value
@@ -405,12 +398,6 @@ function copycode(elementId){
         .catch(err => alert("Failed to copy code: " + err));
 }
 
-// FUNCTION TO SHOW MESSAGE
-function showMsg(){
-    alert("Code copied to clipboard!");
-}
-
-
 // Attach copy event to each button, passing the correct code element id
 const codeIds = [
     "box-shadow-code",
@@ -426,6 +413,17 @@ copyButtons.forEach((button, idx) => {
 });
 
 
+
+
+// FUNCTION TO SHOW MESSAGE
+let msgBox = document.getElementById("msg-box");
+
+function showMsg(){
+    msgBox.style.transform = "scale(1)";
+    setTimeout(() => {
+        msgBox.style.transform = "scale(0)";
+    }, 2000);
+}
 
 
 
