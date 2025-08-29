@@ -6,7 +6,7 @@
     /* outline: 1px solid red; */
 }
 body{
-    background-color: #e1cceb;
+    background-color: #f9e4ec;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     width: 100%;
 }
@@ -83,7 +83,7 @@ body{
 /* ------------------------------------------------------- */
 
 .main-container{
-    background-color: rgb(175, 175, 175);
+    /* background-color: rgb(175, 175, 175); */
     display: flex;
     justify-content: space-between;
     margin: 10px auto;
@@ -93,12 +93,12 @@ body{
 
 .left-cont{
     width: 30%;
-    background-color: rgb(255, 0, 0);
+    /* background-color: rgb(255, 0, 0); */
 
 }
 
 .right-cont{
-    background-color: rgb(255, 0, 0);
+    /* background-color: rgb(255, 0, 0); */
     width: 65%;
 }
 
@@ -275,7 +275,7 @@ body{
     margin: 10px;
 }
 .text-shadow-box{
-    font-size: 22px;
+    font-size: 60px;
     font-weight: 700;
     text-transform: capitalize;
     color: rgb(219, 110, 232);

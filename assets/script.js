@@ -242,31 +242,165 @@ gradientColor2.addEventListener("input", updateLinearGradient)
 let animationDuration = document.getElementById("animation-duration")
 let animationTimingFunction = document.getElementById("animation-timing-function")
 let animationIterationCount = document.getElementById("animation-iteration-count")
+let animationInfiniteLoop = document.getElementById("animation-infinite-loop")
+
+let enableOpacity = document.getElementById("enable-opacity")
+let fromOpacity = document.getElementById("from-opacity")
+let toOpacity = document.getElementById("to-opacity")
+
+let enableScale = document.getElementById("enable-scale")
+let fromScale = document.getElementById("from-scale")
+let toScale = document.getElementById("to-scale")
+
+let enableRotation = document.getElementById("enable-rotation")
+let fromRotation = document.getElementById("from-rotation")
+let toRotation = document.getElementById("to-rotation")
+
+let enableColor = document.getElementById("enable-color")
+let fromColor = document.getElementById("from-color")
+let toColor = document.getElementById("to-color")
+
+let enableBlur = document.getElementById("enable-blur")
+let fromBlur = document.getElementById("from-blur")
+let toBlur = document.getElementById("to-blur")
+
 
 let animationBox = document.getElementById("animation-box")
 let animationCode = document.getElementById("animation-code")
 
+
+
+
 function updateAnimation() {
-    // GET VALUES
     let duration = animationDuration.value
-    let timingFunction = animationTimingFunction.value
-    let iterationCount = animationIterationCount.value
+    let timing = animationTimingFunction.value
+    let iterationCount = animationInfiniteLoop.checked ? 'infinite' : animationIterationCount.value
 
-    // UPDATE PREVIEW BOX
-    animationBox.style.animation = `example ${duration}s ${timingFunction} ${iterationCount}`
+    // BUILD KEYFRAMES
+    let keyframeFrom = ""
+    let keyframeTo = ""
 
-    // UPDATE CODE
-    animationCode.innerHTML = `animation: example ${duration}s ${timingFunction} ${iterationCount};`
+
+    // OPACITY
+    if(enableOpacity.checked){
+        keyframeFrom += `opacity: ${fromOpacity.value}; `
+        keyframeTo += `opacity: ${toOpacity.value}; `
+    }
+
+    // SCALE & ROTATEARE APRT OF TRANSFORM PROPERTY
+    let fromTransform = ""
+    let toTransform = ""
+    // SCALE
+    if(enableScale.checked){
+        fromTransform += `scale(${fromScale.value}) `
+        toTransform += `scale(${toScale.value}) `
+    }
+
+    // ROTATE
+    if(enableRotation.checked){
+        fromTransform += `rotate(${fromRotation.value}deg) `
+        toTransform += `rotate(${toRotation.value}deg) `
+    }
+
+    // ADD TRANSFORM TO KEYFRAMES
+    if(fromTransform.length > 0){
+        keyframeFrom += `transform: ${fromTransform}; `
+        keyframeTo += `transform: ${toTransform}; `
+    }
+
+    // COLOR
+    if(enableColor.checked){
+        keyframeFrom += `background-color: ${fromColor.value}; `
+        keyframeTo += `background-color: ${toColor.value}; `
+    }
+
+    // BLUR
+    if(enableBlur.checked){
+        keyframeFrom += `filter: blur(${fromBlur.value}px); `
+        keyframeTo += `filter: blur(${toBlur.value}px); `
+    }
+
+    // CREATE NEW KEYFRAME
+    const styleSheet = document.createElement("style");
+    document.head.appendChild(styleSheet);
+
+    styleSheet.sheet.insertRule(`@keyframes myCustomAnimation {
+        from { ${keyframeFrom} }
+        to { ${keyframeTo} }
+    }`)
+
+
+    // APPLY ANIMATION TO THE BOX
+    animationBox.style.animation = `myCustomAnimation ${duration}s ${timing} ${iterationCount}`
+
+    // UPDATE THE CODE DISPLAY
+    let finalCode = `@keyframes myCustomAnimation {
+        <br>
+        from { 
+        <br>
+            ${keyframeFrom.replace(/;/g, ";<br> ")} 
+        }
+        <br>
+        to { 
+        <br>
+            ${keyframeTo.replace(/;/g, ";<br> ")} 
+        }
+    }
+        <br>
+        ,my-element{
+            animation: myCustomAnimation ${duration}s ${timing} ${iterationCount};
+        }`
+
+    animationCode.innerHTML = finalCode
+
+
+    // UPDATE THE DISPLAY VALUES
+    document.getElementById("animation-duration-value").textContent = duration + "s"
+    // document.getElementById("animation-timing-function").value.textContent = timing
+    document.getElementById("animation-iteration-count-value").textContent = iterationCount
+
+    document.getElementById("from-opacity-value").textContent = fromOpacity.value
+    document.getElementById("to-opacity-value").textContent = toOpacity.value
+
+    document.getElementById("from-scale-value").textContent = fromScale.value
+    document.getElementById("to-scale-value").textContent = toScale.value
+
+    document.getElementById("from-rotation-value").textContent = fromRotation.value
+    document.getElementById("to-rotation-value").textContent = toRotation.value
+
+    // document.getElementById("from-color-value").textContent = fromColor.value
+    // document.getElementById("to-color-value").textContent = toColor.value
+
+    document.getElementById("from-blur-value").textContent = fromBlur.value
+    document.getElementById("to-blur-value").textContent = toBlur.value
+
 }
 
-animationDuration.addEventListener("input", updateAnimation)
-animationTimingFunction.addEventListener("input", updateAnimation)
-animationIterationCount.addEventListener("input", updateAnimation)
+
+let animationInput = [
+    animationDuration, animationTimingFunction, animationIterationCount, animationInfiniteLoop,
+    enableOpacity, fromOpacity, toOpacity,
+    enableScale, fromScale, toScale,
+    enableRotation, fromRotation, toRotation,
+    enableColor, fromColor, toColor,
+    enableBlur, fromBlur, toBlur
+]
+
+
+
+animationInput.forEach(input => {
+  if (input) input.addEventListener("input", updateAnimation);
+});
 
 
 
 showSection("animation")
 
+updateBoxShadow();
+updateTextShadow();
+updateBorder();
+updateLinearGradient();
+updateAnimation();
 
 
 
