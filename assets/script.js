@@ -386,11 +386,47 @@ let animationInput = [
     enableBlur, fromBlur, toBlur
 ]
 
-
-
 animationInput.forEach(input => {
-  if (input) input.addEventListener("input", updateAnimation);
+    if (input) input.addEventListener("input", updateAnimation);  
 });
+
+
+
+// -----------------------------------------------------------------------------------------
+let copyButtons = document.querySelectorAll("#copy-code-btn");
+
+
+// FUNCTION TO COPY CODE 
+function copycode(elementId){
+    const codeElement = document.getElementById(elementId);
+    // if(!codeElement) return;
+    navigator.clipboard.writeText(codeElement.textContent)
+        .then(showMsg)
+        .catch(err => alert("Failed to copy code: " + err));
+}
+
+// FUNCTION TO SHOW MESSAGE
+function showMsg(){
+    alert("Code copied to clipboard!");
+}
+
+
+// Attach copy event to each button, passing the correct code element id
+const codeIds = [
+    "box-shadow-code",
+    "text-shadow-code",
+    "border-code",
+    "linear-gradient-code",
+    "animation-code"
+];
+copyButtons.forEach((button, idx) => {
+    button.addEventListener("click", () => {
+        copycode(codeIds[idx]);
+    });
+});
+
+
+
 
 
 
